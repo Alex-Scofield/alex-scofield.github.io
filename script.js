@@ -41,7 +41,12 @@ function createDivs() {
         day.innerText = i;
         
         day.style.top = HEIGHT*((i-1)/24)+HEIGHT/7 + "pt";
-        day.style.right = WIDTH*((i-1)%6/24) + "pt";
+        if(i%2){
+            day.style.right = "pt";
+        }
+        else {
+            day.style.right = "0pt";
+        }
         days.push(day);
         document.body.appendChild(day);
     }
